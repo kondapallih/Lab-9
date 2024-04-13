@@ -11,6 +11,19 @@ def encoder(values):
             encoded_values += str(int(value)+3)
     return encoded_values
 
+def decoder(encoded_values):
+    decoded_values = ""
+    for value in encoded_values:
+        if value == '0':
+            decoded_values += '7'
+        elif value == '1':
+            decoded_values += '8'
+        elif value == '2':
+            decoded_values += '9'
+        else:
+            decoded_values += str(int(value)-3)
+    return decoded_values
+
 def main():
     encoded_string = ""
     while True:
